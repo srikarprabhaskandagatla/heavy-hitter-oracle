@@ -142,7 +142,6 @@ if __name__ == "__main__":
         2 * n_layers // 3,
         n_layers - 1,
     ]
-    # Use the same four colours so the legend is consistent across all plots.
     rep_colors = colors[:len(rep_layers)]
 
     fig3, ax3 = plt.subplots(figsize=(9, 4))
