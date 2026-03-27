@@ -1,0 +1,41 @@
+Loading facebook/opt-6.7b
+32 layers | device map: {'': 0}
+Loading WikiText-103
+Using 20 samples
+sample 1/20.
+sample 2/20.
+sample 3/20.
+sample 4/20.
+sample 5/20.
+sample 6/20.
+sample 7/20.
+sample 8/20.
+sample 9/20.
+sample 10/20.
+sample 11/20.
+sample 12/20.
+sample 13/20.
+sample 14/20.
+sample 15/20.
+sample 16/20.
+sample 17/20.
+sample 18/20.
+sample 19/20.
+sample 20/20.
+Done collecting attention stats.
+Saved results/00_sparsity_stats.json
+Saved srikar/heavy-hitter-oracle/plots/00_sparsity_layerwise.png
+Saved srikar/heavy-hitter-oracle/plots/00_sparsity_heatmap.png
+Saved srikar/heavy-hitter-oracle/plots/00_sparsity_cdf.png
+
+======== REPORT ========
+  Top  5% of tokens carry on average 65.3% of total attention mass (across all layers)
+  Top 10% of tokens carry on average 70.5% of total attention mass (across all layers)
+  Top 20% of tokens carry on average 77.8% of total attention mass (across all layers)
+  Top 50% of tokens carry on average 91.0% of total attention mass (across all layers)
+==========================
+
+==========================================
+End: Fri Mar 27 09:52:17 PM UTC 2026
+Sparsity plots saved to srikar/heavy-hitter-oracle/plots/
+==========================================
