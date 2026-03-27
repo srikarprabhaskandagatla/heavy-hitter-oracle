@@ -83,7 +83,7 @@ if __name__ == "__main__":
                         "std":  float(np.std(vals))}
 
     # save numeric summary
-    with open(f"{args.out_dir}/results/sparsity_stats.json", "w") as f:
+    with open(f"{args.out_dir}/results/00_sparsity_stats.json", "w") as f:
         json.dump({str(k): {str(rr): vv for rr, vv in v.items()}
                 for k, v in stats.items()}, f, indent=2)
     print("Saved results/sparsity_stats.json")
@@ -93,7 +93,7 @@ if __name__ == "__main__":
     layers = list(range(n_layers))
     colors = ["#378ADD", "#1D9E75", "#D85A30", "#D4537E"]
 
-    fig, ax = plt.subplots(figsize=(11, 4))
+    fig, ax = plt.subplots(figsize=(9, 6))
     for r, c in zip(args.top_ratios, colors):
         means = [stats[l][r]["mean"] for l in layers]
         stds  = [stats[l][r]["std"]  for l in layers]
@@ -103,16 +103,16 @@ if __name__ == "__main__":
                         [m+s for m,s in zip(means,stds)],
                         alpha=0.12, color=c)
 
-    ax.set_xlabel("Layer index", fontsize=12)
-    ax.set_ylabel("Fraction of total attention mass", fontsize=12)
-    ax.set_title(f"Layer-wise attention sparsity - {args.model.split('/')[-1]} "
+    ax.set_xlabel("Layer Index", fontsize=12)
+    ax.set_ylabel("Fraction of Total Attention Mass", fontsize=12)
+    ax.set_title(f"Layer-wise Attention Sparsity - {args.model.split('/')[-1]} "
                 f"on WikiText-103 ({len(texts)} samples)", fontsize=13)
     ax.legend(fontsize=10)
     ax.set_ylim(0, 1.05)
     ax.axhline(0.5, color="gray", linestyle="--", linewidth=0.8, alpha=0.5)
     ax.grid(True, alpha=0.25)
     fig.tight_layout()
-    path1 = f"{args.out_dir}/plots/sparsity_layerwise.png"
+    path1 = f"{args.out_dir}/plots/00_sparsity_layerwise.png"
     fig.savefig(path1, dpi=150)
     print(f"Saved {path1}")
 
@@ -127,10 +127,10 @@ if __name__ == "__main__":
     ax2.set_xlabel("Layer index", fontsize=12)
     ax2.set_yticks(range(len(args.top_ratios)))
     ax2.set_yticklabels([f"Top {int(r*100)}%" for r in args.top_ratios])
-    ax2.set_title("Attention mass concentration by layer", fontsize=13)
-    fig2.colorbar(im, ax=ax2, label="Fraction of attention mass")
+    ax2.set_title("Attention Mass Concentration by Layer", fontsize=13)
+    fig2.colorbar(im, ax=ax2, label="Fraction of Attention Mass")
     fig2.tight_layout()
-    path2 = f"{args.out_dir}/plots/sparsity_heatmap.png"
+    path2 = f"{args.out_dir}/plots/00_sparsity_heatmap.png"
     fig2.savefig(path2, dpi=150)
     print(f"Saved {path2}")
 
@@ -144,7 +144,7 @@ if __name__ == "__main__":
     ]
     rep_colors = colors[:len(rep_layers)]
 
-    fig3, ax3 = plt.subplots(figsize=(9, 4))
+    fig3, ax3 = plt.subplots(figsize=(9, 6))
 
     for l, c in zip(rep_layers, rep_colors):
         pooled = np.concatenate(layer_col_sums[l])  
@@ -155,12 +155,12 @@ if __name__ == "__main__":
         ax3.plot(x_frac, cdf, label=f"Layer {l}", linewidth=2, color=c)
 
     ax3.axhline(0.5, color="gray", linestyle="--", linewidth=0.8, alpha=0.6,
-                label="50% attention mass")
-    ax3.set_xlabel("Fraction of tokens (sorted by attention received, descending)",
+                label="50% Attention Mass")
+    ax3.set_xlabel("Fraction of Tokens (sorted by attention received, descending)",
                 fontsize=12)
     ax3.set_ylabel("Cumulative attention mass", fontsize=12)
     ax3.set_title(
-        f"Heavy-hitter distribution: CDF of accumulated attention scores\n"
+        f"Heavy-Hitter Distribution: CDF of Accumulated Attention Scores\n"
         f"{args.model.split('/')[-1]} on WikiText-103 ({len(texts)} samples)",
         fontsize=12,
     )
@@ -169,7 +169,7 @@ if __name__ == "__main__":
     ax3.set_ylim(0, 1.05)
     ax3.grid(True, alpha=0.25)
     fig3.tight_layout()
-    path3 = f"{args.out_dir}/plots/sparsity_cdf.png"
+    path3 = f"{args.out_dir}/plots/00_sparsity_cdf.png"
     fig3.savefig(path3, dpi=150)
     print(f"Saved {path3}")
 
