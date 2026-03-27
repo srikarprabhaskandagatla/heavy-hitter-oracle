@@ -5,10 +5,10 @@ H2O's insight: **a small fraction of tokens consistently receives the majority o
 
 This repo re-implements the H2O eviction algorithm **from scratch** in PyTorch, validates it against the authors' released code, and runs the full suite of experiments from the paper.
 
-## Files At Present
+### Files At Present
 #### Let's first discuss the scratch H2O Implementation.
 ---
-### `h2o_scratch/h2o_attention.py`
+#### `h2o_scratch/h2o_attention.py`
 The core of the project. Implements `H2OAttention`, a subclass of HuggingFace's `OPTAttention` that overrides only `forward()` to insert the KV eviction step. All Q/K/V projection weights are inherited unchanged - only the cache management logic is new.
 
 Key components inside:
@@ -23,7 +23,7 @@ Key components inside:
 **Prefill vs decode distinction:** eviction only activates when `hidden_states.shape[1] == 1` (one token at a time, i.e. decode phase). During prefill the full prompt is processed normally.
 
 ---
-### `h2o_scratch/h2o_authors_wrapper.py`
+#### `h2o_scratch/h2o_authors_wrapper.py`
 A thin bridge to the authors' released code so both implementations can be called from the same scripts with the same interface.
 
 Key function: `patch_model_with_authors_h2o(model, heavy_ratio, recent_ratio)`
@@ -36,12 +36,12 @@ Three bugs encountered and fixed here (documented in the source):
 **Important limitation discovered:** the authors' implementation indexes `attn_weights[:, token_index, :]` assuming the full attention matrix (shape `(batch, seq_len, seq_len)`). During `model.generate()`, this dimension is always 1, causing an immediate `IndexError`. The authors' code therefore **only works with lm-eval loglikelihood scoring** (Experiments 1 and 3) and cannot be used for throughput benchmarking (Experiment 2). Our scratch implementation supports both.
 
 ---
-### `h2o_scratch/__init__.py`
+#### `h2o_scratch/__init__.py`
 Package-level exports. Imports `H2OAttention`, `patch_model_with_h2o`, `reset_h2o_caches` from `h2o_attention.py` and `patch_model_with_authors_h2o` from `h2o_authors_wrapper.py` so all four are importable from `h2o_scratch` directly.
 
 #### Let's discuss the experiment analysis files
 ---
-### `scripts/00_sparsity_analysis.py` - Observation
+#### `scripts/00_sparsity_analysis.py` - Observation
 **Purpose:** Empirically verify the paper's central motivation - that a small fraction of tokens accumulates most attention mass - before implementing anything.
 
 **What it does:**
@@ -59,7 +59,7 @@ Package-level exports. Imports `H2OAttention`, `patch_model_with_h2o`, `reset_h2
 | `results/sparsity_stats.json` | Full numeric summary: mean and std per layer per ratio - copy these numbers into the report |
 
 ---
-### `scripts/01_accuracy_eval.py` - Experiment 1
+#### `scripts/01_accuracy_eval.py` - Experiment 1
 **Purpose:** Measure whether H2O eviction degrades downstream task accuracy vs full KV cache, and validate our scratch implementation against the authors'.
 
 **What it does - four sequential parts:**
@@ -82,7 +82,7 @@ Package-level exports. Imports `H2OAttention`, `patch_model_with_h2o`, `reset_h2
 | `results/accuracy_table.txt` | Formatted table ready to paste into the report |
 
 
-## Our Implementation vs Authors' Implementation
+### Our Implementation vs Authors' Implementation
 | Property | Ours (`h2o_attention.py`) | Authors' (`modify_opt.py`) |
 |---|---|---|
 | Works with `model.generate()` | Yes | No - crashes with IndexError |
@@ -93,12 +93,12 @@ Package-level exports. Imports `H2OAttention`, `patch_model_with_h2o`, `reset_h2
 
 ---
 
-
 > **COMPSCI 690AB - Milestone Report**
+
 For this milestone report, we have completed the **Observation** (layer-wise attention sparsity analysis on WikiText-103) and **Experiment 1** (downstream task accuracy evaluation on COPA and Winogrande). Experiments 2 (throughput) and 3 (ablation) are reserved and still under testing for the final report.
 
 ---
-## Reference Base Paper
+### Reference Base Paper
 **H2O: Heavy-Hitter Oracle for Efficient Generative Inference of Large Language Models**
 Zhenyu Zhang, Ying Sheng, Tianyi Zhou, et al. NeurIPS 2023
 
