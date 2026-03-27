@@ -39,8 +39,8 @@ Three bugs encountered and fixed here (documented in the source):
 #### `h2o_scratch/__init__.py`
 Package-level exports. Imports `H2OAttention`, `patch_model_with_h2o`, `reset_h2o_caches` from `h2o_attention.py` and `patch_model_with_authors_h2o` from `h2o_authors_wrapper.py` so all four are importable from `h2o_scratch` directly.
 
-#### Let's discuss the experiment analysis files
 ---
+#### Let's discuss the experiment analysis files
 #### `scripts/00_sparsity_analysis.py` - Observation
 **Purpose:** Empirically verify the paper's central motivation - that a small fraction of tokens accumulates most attention mass - before implementing anything.
 
