@@ -23,10 +23,10 @@ sample 18/20.
 sample 19/20.
 sample 20/20.
 Done collecting attention stats.
-Saved results/00_sparsity_stats.json
-Saved srikar/heavy-hitter-oracle/plots/00_sparsity_layerwise.png
-Saved srikar/heavy-hitter-oracle/plots/00_sparsity_heatmap.png
-Saved srikar/heavy-hitter-oracle/plots/00_sparsity_cdf.png
+Saved results/sparsity_stats.json
+Saved /srikar/heavy-hitter-oracle/plots/00_sparsity_layerwise.png
+Saved /srikar/heavy-hitter-oracle/plots/00_sparsity_heatmap.png
+Saved /srikar/heavy-hitter-oracle/plots/00_sparsity_cdf.png
 
 ======== REPORT ========
   Top  5% of tokens carry on average 65.3% of total attention mass (across all layers)
@@ -36,6 +36,6 @@ Saved srikar/heavy-hitter-oracle/plots/00_sparsity_cdf.png
 ==========================
 
 ==========================================
-End: Fri Mar 27 09:52:17 PM UTC 2026
-Sparsity plots saved to srikar/heavy-hitter-oracle/plots/
+End: Sat Mar 28 02:06:21 AM UTC 2026
+Sparsity plots saved to /srikar/heavy-hitter-oracle/plots/
 ==========================================

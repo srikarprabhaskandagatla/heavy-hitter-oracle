@@ -97,7 +97,7 @@ if __name__ == "__main__":
     all_results[label] = run_eval(model, tokenizer, args.tasks, label)
     print(f"  Elapsed: {(time.time()-t0)/60:.1f} min")
 
-    with open(f"{args.out_dir}/results/accuracy_results.json", "w") as f:
+    with open(f"{args.out_dir}/results/01_accuracy_results.json", "w") as f:
         json.dump(all_results, f, indent=2)
 
 
@@ -124,7 +124,7 @@ if __name__ == "__main__":
         all_results[label] = run_eval(model, tokenizer, args.tasks, label)
         print(f"  Elapsed: {(time.time()-t0)/60:.1f} min")
 
-        with open(f"{args.out_dir}/results/accuracy_results.json", "w") as f:
+        with open(f"{args.out_dir}/results/01_accuracy_results.json", "w") as f:
             json.dump(all_results, f, indent=2)
 
 
@@ -135,7 +135,7 @@ if __name__ == "__main__":
     for budget in scratch_budgets:
         heavy_r  = budget / 2.0
         recent_r = budget / 2.0
-        label    = f"Authors H2O {int(budget*100)}% budget"
+        label    = f"Authors H2O {int(budget*100)}% Budget"
 
         print(f"\n{'='*60}\nRunning: {label}\n{'='*60}")
 
@@ -149,7 +149,7 @@ if __name__ == "__main__":
         del model_authors
         torch.cuda.empty_cache()
 
-        with open(f"{args.out_dir}/results/accuracy_results.json", "w") as f:
+        with open(f"{args.out_dir}/results/01_accuracy_results.json", "w") as f:
             json.dump(all_results, f, indent=2)
 
 
@@ -160,7 +160,7 @@ if __name__ == "__main__":
 
     model_local = _load_fresh_model()
     patch_model_with_h2o(model_local, heavy_ratio=0.0,
-                                    recent_ratio=scratch_budgets[0])
+                                      recent_ratio=scratch_budgets[0])
 
     for budget in scratch_budgets:
         label = f"Local-only {int(budget*100)}%"
@@ -175,7 +175,7 @@ if __name__ == "__main__":
         all_results[label] = run_eval(model_local, tokenizer, args.tasks, label)
         print(f"  Elapsed: {(time.time()-t0)/60:.1f} min")
 
-        with open(f"{args.out_dir}/results/accuracy_results.json", "w") as f:
+        with open(f"{args.out_dir}/results/01_accuracy_results.json", "w") as f:
             json.dump(all_results, f, indent=2)
 
     del model_local
@@ -194,19 +194,18 @@ if __name__ == "__main__":
     lines.append(sep)
     table_str = "\n".join(lines)
 
-    with open(f"{args.out_dir}/results/accuracy_table.txt", "w") as f:
+    with open(f"{args.out_dir}/results/01_accuracy_table.txt", "w") as f:
         f.write(table_str + "\n")
-    print("\n=== ACCURACY TABLE (copy into report) ===")
+    print("\n=== ACCURACY TABLE ===")
     print(table_str)
 
     # Plot: accuracy vs budget
-
     budgets_pct_sorted = sorted([int(b * 100) for b in scratch_budgets])
     use_log = len(budgets_pct_sorted) > 1 
 
     FAMILIES = [
         ("Scratch H2O", "% budget", -0.5, "#378ADD", "o", "-" ),
-        ("Authors H2O", "% budget", +0.0, "#1D9E75", "s", "--"),
+        ("Authors H2O", "% Budget", +0.0, "#1D9E75", "s", "--"),
         ("Local-only",  "%",        +0.5, "#D85A30", "^", ":" ),
     ]
 
@@ -221,7 +220,7 @@ if __name__ == "__main__":
         full_acc = all_results.get("Full cache (baseline)", {}).get(task, None)
         if full_acc is not None:
             ax.axhline(full_acc, color="gray", linestyle="--",
-                    linewidth=1.2, alpha=0.6, label="Full cache")
+                    linewidth=1.2, alpha=0.6, label="Full Cache")
 
         for family, key_suffix, jitter, color, marker, lstyle in FAMILIES:
             x_vals, y_vals = [], []
@@ -237,7 +236,7 @@ if __name__ == "__main__":
                         markersize=7, markeredgewidth=1.2,
                         markeredgecolor="white", zorder=3)
 
-        ax.set_xlabel("KV budget (% of full cache)", fontsize=11)
+        ax.set_xlabel("KV budget (% of Full Cache)", fontsize=11)
         ax.set_ylabel("Accuracy (%)", fontsize=11)
         ax.set_title(task.upper(), fontsize=12)
 
@@ -254,8 +253,8 @@ if __name__ == "__main__":
         ax.legend(fontsize=8)
         ax.grid(True, alpha=0.25)
 
-    fig.suptitle("H2O accuracy vs KV budget - OPT-6.7B", fontsize=13, y=1.01)
+    fig.suptitle("H2O Accuracy vs KV Budget - OPT-6.7B", fontsize=13, y=1.01)
     fig.tight_layout()
-    plot_path = f"{args.out_dir}/plots/accuracy_vs_budget.png"
+    plot_path = f"{args.out_dir}/plots/01_accuracy_vs_budget.png"
     fig.savefig(plot_path, dpi=150, bbox_inches="tight")
     print(f"Saved {plot_path}")
