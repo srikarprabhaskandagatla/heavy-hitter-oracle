@@ -1,0 +1,80 @@
+{
+  "Full cache (baseline)": {
+    "copa": 81.0,
+    "openbookqa": 27.6,
+    "piqa": 76.22,
+    "winogrande": 65.11
+  },
+  "Scratch H2O 4% budget": {
+    "copa": 58.0,
+    "openbookqa": 12.4,
+    "piqa": 53.54,
+    "winogrande": 53.83
+  },
+  "Scratch H2O 10% budget": {
+    "copa": 58.0,
+    "openbookqa": 12.8,
+    "piqa": 54.24,
+    "winogrande": 53.83
+  },
+  "Scratch H2O 20% budget": {
+    "copa": 59.0,
+    "openbookqa": 13.2,
+    "piqa": 58.87,
+    "winogrande": 52.09
+  },
+  "Scratch H2O 50% budget": {
+    "copa": 67.0,
+    "openbookqa": 15.0,
+    "piqa": 67.63,
+    "winogrande": 51.62
+  },
+  "Authors H2O 4% Budget": {
+    "copa": 54.0,
+    "openbookqa": 14.0,
+    "piqa": 52.18,
+    "winogrande": 49.72
+  },
+  "Authors H2O 10% Budget": {
+    "copa": 54.0,
+    "openbookqa": 13.6,
+    "piqa": 51.8,
+    "winogrande": 48.93
+  },
+  "Authors H2O 20% Budget": {
+    "copa": 62.0,
+    "openbookqa": 14.6,
+    "piqa": 52.5,
+    "winogrande": 49.8
+  },
+  "Authors H2O 50% Budget": {
+    "copa": 57.0,
+    "openbookqa": 11.8,
+    "piqa": 52.45,
+    "winogrande": 49.25
+  },
+  "Local-only 4%": {
+    "copa": 58.0,
+    "openbookqa": 12.4,
+    "piqa": 53.59,
+    "winogrande": 53.83
+  },
+  "Local-only 10%": {
+    "copa": 59.0,
+    "openbookqa": 12.6,
+    "piqa": 54.68,
+    "winogrande": 53.28
+  },
+  "Local-only 20%": {
+    "copa": 53.0,
+    "openbookqa": 15.4,
+    "piqa": 61.86,
+    "winogrande": 49.8
+  },
+  "Local-only 50%": {
+    "copa": 71.0,
+    "openbookqa": 20.4,
+    "piqa": 71.93,
+    "winogrande": 58.01
+  }
+}
