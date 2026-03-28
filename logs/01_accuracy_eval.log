@@ -1,0 +1,113 @@
+
+Loading facebook/opt-6.7b
+GPU memory after load: 13.3 GB
+
+============================================================
+Running: Full cache (baseline)
+============================================================
+  [Full cache (baseline)] copa: 81.0% | openbookqa: 27.6% | piqa: 76.2% | winogrande: 65.1%
+  Elapsed: 1.0 min
+[H2O] Patched 32 OPTAttention layers (heavy=2%, recent=2%, total budget=4%)
+
+============================================================
+Running: Scratch H2O 4% budget
+============================================================
+  [Scratch H2O 4% budget] copa: 58.0% | openbookqa: 12.4% | piqa: 53.5% | winogrande: 53.8%
+  Elapsed: 2.6 min
+
+============================================================
+Running: Scratch H2O 10% budget
+============================================================
+  [Scratch H2O 10% budget] copa: 58.0% | openbookqa: 12.8% | piqa: 54.2% | winogrande: 53.8%
+  Elapsed: 2.6 min
+
+============================================================
+Running: Scratch H2O 20% budget
+============================================================
+  [Scratch H2O 20% budget] copa: 59.0% | openbookqa: 13.2% | piqa: 58.9% | winogrande: 52.1%
+  Elapsed: 2.6 min
+
+============================================================
+Running: Scratch H2O 50% budget
+============================================================
+  [Scratch H2O 50% budget] copa: 67.0% | openbookqa: 15.0% | piqa: 67.6% | winogrande: 51.6%
+  Elapsed: 2.7 min
+
+============================================================
+Running: Authors H2O 4% Budget
+============================================================
+Loading fresh base model
+[Authors' H2O] Patched model (heavy=2%, recent=2%, total budget=4%)
+  [Authors H2O 4% Budget] copa: 54.0% | openbookqa: 14.0% | piqa: 52.2% | winogrande: 49.7%
+  Elapsed: 1.4 min
+
+============================================================
+Running: Authors H2O 10% Budget
+============================================================
+Loading fresh base model
+[Authors' H2O] Patched model (heavy=5%, recent=5%, total budget=10%)
+  [Authors H2O 10% Budget] copa: 54.0% | openbookqa: 13.6% | piqa: 51.8% | winogrande: 48.9%
+  Elapsed: 2.4 min
+
+============================================================
+Running: Authors H2O 20% Budget
+============================================================
+Loading fresh base model
+[Authors' H2O] Patched model (heavy=10%, recent=10%, total budget=20%)
+  [Authors H2O 20% Budget] copa: 62.0% | openbookqa: 14.6% | piqa: 52.5% | winogrande: 49.8%
+  Elapsed: 2.8 min
+
+============================================================
+Running: Authors H2O 50% Budget
+============================================================
+Loading fresh base model
+[Authors' H2O] Patched model (heavy=25%, recent=25%, total budget=50%)
+  [Authors H2O 50% Budget] copa: 57.0% | openbookqa: 11.8% | piqa: 52.5% | winogrande: 49.2%
+  Elapsed: 2.7 min
+
+============================================================
+Running: Local-only ablation sweep across all budgets
+============================================================
+Loading fresh base model
+[H2O] Patched 32 OPTAttention layers (heavy=0%, recent=4%, total budget=4%)
+
+--- Local-only 4% ---
+  [Local-only 4%] copa: 58.0% | openbookqa: 12.4% | piqa: 53.6% | winogrande: 53.8%
+  Elapsed: 2.6 min
+
+--- Local-only 10% ---
+  [Local-only 10%] copa: 59.0% | openbookqa: 12.6% | piqa: 54.7% | winogrande: 53.3%
+  Elapsed: 2.6 min
+
+--- Local-only 20% ---
+  [Local-only 20%] copa: 53.0% | openbookqa: 15.4% | piqa: 61.9% | winogrande: 49.8%
+  Elapsed: 2.6 min
+
+--- Local-only 50% ---
+  [Local-only 50%] copa: 71.0% | openbookqa: 20.4% | piqa: 71.9% | winogrande: 58.0%
+  Elapsed: 2.6 min
+
+=== ACCURACY TABLE ===
+-------------------------------------------------------------------------------------------
+Method                                       COPA    OPENBOOKQA          PIQA    WINOGRANDE
+-------------------------------------------------------------------------------------------
+Full cache (baseline)                       81.0%         27.6%         76.2%         65.1%
+Scratch H2O 4% budget                       58.0%         12.4%         53.5%         53.8%
+Scratch H2O 10% budget                      58.0%         12.8%         54.2%         53.8%
+Scratch H2O 20% budget                      59.0%         13.2%         58.9%         52.1%
+Scratch H2O 50% budget                      67.0%         15.0%         67.6%         51.6%
+Authors H2O 4% Budget                       54.0%         14.0%         52.2%         49.7%
+Authors H2O 10% Budget                      54.0%         13.6%         51.8%         48.9%
+Authors H2O 20% Budget                      62.0%         14.6%         52.5%         49.8%
+Authors H2O 50% Budget                      57.0%         11.8%         52.5%         49.2%
+Local-only 4%                               58.0%         12.4%         53.6%         53.8%
+Local-only 10%                              59.0%         12.6%         54.7%         53.3%
+Local-only 20%                              53.0%         15.4%         61.9%         49.8%
+Local-only 50%                              71.0%         20.4%         71.9%         58.0%
+-------------------------------------------------------------------------------------------
+Saved /srikar/heavy-hitter-oracle/plots/01_accuracy_vs_budget.png
+============================================================
+End: Sat Mar 28 12:02:32 AM UTC 2026
+Results saved to /srikar/heavy-hitter-oracle/results/accuracy_results.json
+Table  saved to /srikar/heavy-hitter-oracle/results/accuracy_table.txt
+============================================================
