@@ -3,8 +3,3 @@
 /h2o_scratch/__pycache__/
 
 /h2o_authors
-
-/scripts/02_throughput_error_dim.py
-/scripts/02_throughput.py
-/scripts/03_ablation.py
-/scripts/generate_milestone_report.py
