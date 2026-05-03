@@ -1,4 +1,4 @@
-# H2O: Heavy-Hitter Oracle — Re-Implementation & Experiments
+# H2O: Heavy-Hitter Oracle - Re-Implementation & Experiments
 
 Standard LLM inference stores every past token's Key and Value vectors in a KV cache that grows linearly with sequence length. For OPT-6.7B at FP16, a batch of 16 at length 512 adds ~4 GB on top of the 13.3 GB model weights.
 
@@ -22,9 +22,9 @@ This repo re-implements H2O from scratch in PyTorch and runs a full suite of exp
 
 ---
 
-## Exp 0 — Attention Sparsity Analysis
+## Exp 0 - Attention Sparsity Analysis
 
-**Finding:** the top 20% of tokens capture ~85% of total attention mass across all layers — confirming the heavy-hitter phenomenon motivating H2O.
+**Finding:** the top 20% of tokens capture ~85% of total attention mass across all layers - confirming the heavy-hitter phenomenon motivating H2O.
 
 | Layerwise Sparsity | Heatmap |
 |---|---|
@@ -34,7 +34,7 @@ This repo re-implements H2O from scratch in PyTorch and runs a full suite of exp
 
 ---
 
-## Exp 1 — Accuracy Evaluation
+## Exp 1 - Accuracy Evaluation
 
 **Setup:** Zero-shot on COPA, OpenBookQA, PIQA, Winogrande. Budgets: 4%, 10%, 20%, 50%.
 
@@ -44,7 +44,7 @@ This repo re-implements H2O from scratch in PyTorch and runs a full suite of exp
 
 ---
 
-## Exp 2a — Throughput vs Batch Size
+## Exp 2a - Throughput vs Batch Size
 
 **Setup:** Fixed prompt=256 tokens, generate=128, batch sizes 1→16.
 
@@ -64,7 +64,7 @@ This repo re-implements H2O from scratch in PyTorch and runs a full suite of exp
 
 ---
 
-## Exp 2b — Throughput vs Sequence Length
+## Exp 2b - Throughput vs Sequence Length
 
 **Setup:** Fixed batch=8, generate=128. Prompt lengths: 128, 256, 512.
 
@@ -82,7 +82,7 @@ This repo re-implements H2O from scratch in PyTorch and runs a full suite of exp
 
 ---
 
-## Exp 3 — Ablation: H vs R Components
+## Exp 3 - Ablation: H vs R Components
 
 **Setup:** Fixed 20% budget, zero-shot on 4 tasks.
 
@@ -105,7 +105,7 @@ This repo re-implements H2O from scratch in PyTorch and runs a full suite of exp
 
 ---
 
-## Exp 4 — H:R Ratio Sweep
+## Exp 4 - H:R Ratio Sweep
 
 **Setup:** Fixed 20% total budget, 5 splits from all-recent to all-heavy.
 
@@ -131,7 +131,7 @@ This repo re-implements H2O from scratch in PyTorch and runs a full suite of exp
 
 ---
 
-## Exp 5 — Lambda Decay Sweep
+## Exp 5 - Lambda Decay Sweep
 
 **Setup:** H2O 50/50 at 20% budget, vary decay factor applied to running attention scores.
 
@@ -143,7 +143,7 @@ This repo re-implements H2O from scratch in PyTorch and runs a full suite of exp
 | 0.80 | 60.0% | 13.4% | 57.0% | 51.9% | 45.6% |
 | 0.50 | 59.0% | 14.6% | 56.2% | 51.5% | 45.3% |
 
-**Finding:** mild decay (lambda=0.90) gives a marginal improvement but the effect is minimal — standard H2O is already near-optimal.
+**Finding:** mild decay (lambda=0.90) gives a marginal improvement but the effect is minimal - standard H2O is already near-optimal.
 
 ![](plots/05_lambda_decay/05_lambda_decay_avg.png)
 
