@@ -1,0 +1,60 @@
+Loading facebook/opt-6.7b
+[H2O+Decay] Patched 32 layers  (heavy=10%, recent=10%, lambda=1.0)
+
+============================================================
+Running: lambda=1.00 (standard H2O)
+============================================================
+  [lambda=1.00 (standard H2O)]  copa: 59.0% | openbookqa: 13.2% | piqa: 58.8% | winogrande: 51.9%  | Avg: 45.7%
+Elapsed: 6.8 min
+Saved.
+
+============================================================
+Running: lambda=0.95
+============================================================
+  [lambda=0.95]  copa: 59.0% | openbookqa: 13.0% | piqa: 58.6% | winogrande: 52.4%  | Avg: 45.8%
+Elapsed: 7.3 min
+Saved.
+
+============================================================
+Running: lambda=0.90
+============================================================
+  [lambda=0.90]  copa: 59.0% | openbookqa: 13.4% | piqa: 58.5% | winogrande: 53.3%  | Avg: 46.1%
+Elapsed: 7.5 min
+Saved.
+
+============================================================
+Running: lambda=0.80
+============================================================
+  [lambda=0.80]  copa: 60.0% | openbookqa: 13.4% | piqa: 57.0% | winogrande: 51.9%  | Avg: 45.6%
+Elapsed: 7.5 min
+Saved.
+
+============================================================
+Running: lambda=0.50
+============================================================
+  [lambda=0.50]  copa: 59.0% | openbookqa: 14.6% | piqa: 56.1% | winogrande: 51.5%  | Avg: 45.3%
+Elapsed: 7.5 min
+Saved.
+
+===========================================================================
+EXPERIMENT 5 RESULTS — Decay Lambda Sweep (H2O 20% Budget, OPT-6.7B)
+===========================================================================
+Lambda                           COPA  OPENBOOKQA        PIQA  WINOGRANDE     Avg
+---------------------------------------------------------------------------
+lambda=1.00 (standard H2O)       59.0%       13.2%       58.8%       51.9%   45.7%
+lambda=0.95                     59.0%       13.0%       58.6%       52.4%   45.8%
+lambda=0.90                     59.0%       13.4%       58.5%       53.3%   46.1%
+lambda=0.80                     60.0%       13.4%       57.0%       51.9%   45.6%
+lambda=0.50                     59.0%       14.6%       56.1%       51.5%   45.3%
+===========================================================================
+Saved: /srikar/heavy-hitter-oracle/plots/05_lambda_decay/05_lambda_decay_copa.png
+Saved: /srikar/heavy-hitter-oracle/plots/05_lambda_decay/05_lambda_decay_openbookqa.png
+Saved: /srikar/heavy-hitter-oracle/plots/05_lambda_decay/05_lambda_decay_piqa.png
+Saved: /srikar/heavy-hitter-oracle/plots/05_lambda_decay/05_lambda_decay_winogrande.png
+Saved: /srikar/heavy-hitter-oracle/plots/05_lambda_decay/05_lambda_decay_avg.png
+
+All Exp 5 plots saved.
+==========================================
+End: Sun May  3 02:07:38 AM UTC 2026
+Results: /srikar/heavy-hitter-oracle/results/05_lambda_decay.json
+==========================================
