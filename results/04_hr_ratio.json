@@ -1,0 +1,32 @@
+{
+  "H=0%,  R=20%": {
+    "copa": 53.0,
+    "openbookqa": 14.4,
+    "piqa": 52.77,
+    "winogrande": 50.75
+  },
+  "H=10%, R=10%": {
+    "copa": 53.0,
+    "openbookqa": 14.8,
+    "piqa": 58.76,
+    "winogrande": 50.75
+  },
+  "H=20%, R=0%": {
+    "copa": 59.0,
+    "openbookqa": 13.8,
+    "piqa": 52.72,
+    "winogrande": 50.51
+  },
+  "H=5%,  R=15%": {
+    "copa": 60.0,
+    "openbookqa": 14.4,
+    "piqa": 61.26,
+    "winogrande": 52.96
+  },
+  "H=15%, R=5%": {
+    "copa": 56.0,
+    "openbookqa": 12.8,
+    "piqa": 56.2,
+    "winogrande": 50.2
+  }
+}
