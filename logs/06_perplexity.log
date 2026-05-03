@@ -1,0 +1,321 @@
+No existing results. Running all conditions...
+
+Loading facebook/opt-6.7b ...
+  VRAM 13.32 GB
+Loading WikiText (wikitext-103-v1, validation) ...
+  Tokens: 211,821
+
+============================================================
+Dataset: wikitext-103-v1  |  Condition: Full Cache
+============================================================
+  Full Cache — no eviction
+  [Full Cache] win 1/20  ppl=12.57
+  [Full Cache] win 2/20  ppl=10.24
+  [Full Cache] win 3/20  ppl=10.30
+  [Full Cache] win 4/20  ppl=9.10
+  [Full Cache] win 5/20  ppl=9.05
+  [Full Cache] win 6/20  ppl=9.13
+  [Full Cache] win 7/20  ppl=9.00
+  [Full Cache] win 8/20  ppl=9.07
+  [Full Cache] win 9/20  ppl=8.78
+  [Full Cache] win 10/20  ppl=8.87
+  [Full Cache] win 11/20  ppl=8.63
+  [Full Cache] win 12/20  ppl=8.62
+  [Full Cache] win 13/20  ppl=8.49
+  [Full Cache] win 14/20  ppl=8.77
+  [Full Cache] win 15/20  ppl=8.87
+  [Full Cache] win 16/20  ppl=8.69
+  [Full Cache] win 17/20  ppl=8.66
+  [Full Cache] win 18/20  ppl=8.58
+  [Full Cache] win 19/20  ppl=8.50
+  [Full Cache] win 20/20  ppl=8.46
+  [Full Cache]  FINAL PPL = 8.464
+Elapsed: 3.0 min
+Saved.
+
+============================================================
+Dataset: wikitext-103-v1  |  Condition: Authors H2O 20%
+============================================================
+  [Authors] Patched 32 layers  heavy=51 recent=51 (20% of 512)
+  [Authors H2O 20%] win 1/20  ppl=13.71
+  [Authors H2O 20%] win 2/20  ppl=11.43
+  [Authors H2O 20%] win 3/20  ppl=11.50
+  [Authors H2O 20%] win 4/20  ppl=10.51
+  [Authors H2O 20%] win 5/20  ppl=10.49
+  [Authors H2O 20%] win 6/20  ppl=10.50
+  [Authors H2O 20%] win 7/20  ppl=10.37
+  [Authors H2O 20%] win 8/20  ppl=10.46
+  [Authors H2O 20%] win 9/20  ppl=10.12
+  [Authors H2O 20%] win 10/20  ppl=10.17
+  [Authors H2O 20%] win 11/20  ppl=9.88
+  [Authors H2O 20%] win 12/20  ppl=9.89
+  [Authors H2O 20%] win 13/20  ppl=9.73
+  [Authors H2O 20%] win 14/20  ppl=10.04
+  [Authors H2O 20%] win 15/20  ppl=10.17
+  [Authors H2O 20%] win 16/20  ppl=9.95
+  [Authors H2O 20%] win 17/20  ppl=9.94
+  [Authors H2O 20%] win 18/20  ppl=9.83
+  [Authors H2O 20%] win 19/20  ppl=9.75
+  [Authors H2O 20%] win 20/20  ppl=9.73
+  [Authors H2O 20%]  FINAL PPL = 9.731
+Elapsed: 4.7 min
+Saved.
+
+============================================================
+Dataset: wikitext-103-v1  |  Condition: Ours H2O 20%
+============================================================
+  [Ours]    Patched 32 layers  heavy=51 recent=51 (20% of 512)
+  [Ours H2O 20%] win 1/20  ppl=18.42
+  [Ours H2O 20%] win 2/20  ppl=14.71
+  [Ours H2O 20%] win 3/20  ppl=14.83
+  [Ours H2O 20%] win 4/20  ppl=12.87
+  [Ours H2O 20%] win 5/20  ppl=12.91
+  [Ours H2O 20%] win 6/20  ppl=13.01
+  [Ours H2O 20%] win 7/20  ppl=12.72
+  [Ours H2O 20%] win 8/20  ppl=12.69
+  [Ours H2O 20%] win 9/20  ppl=12.29
+  [Ours H2O 20%] win 10/20  ppl=12.49
+  [Ours H2O 20%] win 11/20  ppl=12.21
+  [Ours H2O 20%] win 12/20  ppl=12.16
+  [Ours H2O 20%] win 13/20  ppl=11.86
+  [Ours H2O 20%] win 14/20  ppl=12.18
+  [Ours H2O 20%] win 15/20  ppl=12.12
+  [Ours H2O 20%] win 16/20  ppl=11.88
+  [Ours H2O 20%] win 17/20  ppl=11.90
+  [Ours H2O 20%] win 18/20  ppl=11.80
+  [Ours H2O 20%] win 19/20  ppl=11.58
+  [Ours H2O 20%] win 20/20  ppl=11.54
+  [Ours H2O 20%]  FINAL PPL = 11.538
+Elapsed: 6.5 min
+Saved.
+
+============================================================
+Dataset: wikitext-103-v1  |  Condition: Ours H2O 50%
+============================================================
+  [Ours]    Patched 32 layers  heavy=128 recent=128 (50% of 512)
+  [Ours H2O 50%] win 1/20  ppl=14.61
+  [Ours H2O 50%] win 2/20  ppl=11.84
+  [Ours H2O 50%] win 3/20  ppl=11.54
+  [Ours H2O 50%] win 4/20  ppl=10.17
+  [Ours H2O 50%] win 5/20  ppl=10.02
+  [Ours H2O 50%] win 6/20  ppl=9.99
+  [Ours H2O 50%] win 7/20  ppl=9.86
+  [Ours H2O 50%] win 8/20  ppl=9.95
+  [Ours H2O 50%] win 9/20  ppl=9.57
+  [Ours H2O 50%] win 10/20  ppl=9.66
+  [Ours H2O 50%] win 11/20  ppl=9.40
+  [Ours H2O 50%] win 12/20  ppl=9.39
+  [Ours H2O 50%] win 13/20  ppl=9.26
+  [Ours H2O 50%] win 14/20  ppl=9.58
+  [Ours H2O 50%] win 15/20  ppl=9.61
+  [Ours H2O 50%] win 16/20  ppl=9.42
+  [Ours H2O 50%] win 17/20  ppl=9.38
+  [Ours H2O 50%] win 18/20  ppl=9.31
+  [Ours H2O 50%] win 19/20  ppl=9.20
+  [Ours H2O 50%] win 20/20  ppl=9.19
+  [Ours H2O 50%]  FINAL PPL = 9.185
+Elapsed: 6.4 min
+Saved.
+
+============================================================
+Dataset: wikitext-103-v1  |  Condition: Local-only 20%
+============================================================
+  [Ours]    Patched 32 layers  heavy=0 recent=102 (20% of 512)
+  [Local-only 20%] win 1/20  ppl=33.49
+  [Local-only 20%] win 2/20  ppl=27.71
+  [Local-only 20%] win 3/20  ppl=29.68
+  [Local-only 20%] win 4/20  ppl=26.38
+  [Local-only 20%] win 5/20  ppl=27.24
+  [Local-only 20%] win 6/20  ppl=26.95
+  [Local-only 20%] win 7/20  ppl=26.86
+  [Local-only 20%] win 8/20  ppl=26.86
+  [Local-only 20%] win 9/20  ppl=27.49
+  [Local-only 20%] win 10/20  ppl=27.79
+  [Local-only 20%] win 11/20  ppl=29.10
+  [Local-only 20%] win 12/20  ppl=29.78
+  [Local-only 20%] win 13/20  ppl=28.93
+  [Local-only 20%] win 14/20  ppl=30.59
+  [Local-only 20%] win 15/20  ppl=32.07
+  [Local-only 20%] win 16/20  ppl=31.68
+  [Local-only 20%] win 17/20  ppl=30.76
+  [Local-only 20%] win 18/20  ppl=30.09
+  [Local-only 20%] win 19/20  ppl=29.02
+  [Local-only 20%] win 20/20  ppl=29.88
+  [Local-only 20%]  FINAL PPL = 29.875
+Elapsed: 6.1 min
+Saved.
+Loading WikiText (wikitext-2-v1, validation) ...
+  Tokens: 219,340
+
+============================================================
+Dataset: wikitext-2-v1  |  Condition: Full Cache
+============================================================
+  Full Cache — no eviction
+  [Full Cache] win 1/20  ppl=11.67
+  [Full Cache] win 2/20  ppl=10.16
+  [Full Cache] win 3/20  ppl=10.25
+  [Full Cache] win 4/20  ppl=9.11
+  [Full Cache] win 5/20  ppl=8.86
+  [Full Cache] win 6/20  ppl=8.93
+  [Full Cache] win 7/20  ppl=8.79
+  [Full Cache] win 8/20  ppl=8.68
+  [Full Cache] win 9/20  ppl=8.55
+  [Full Cache] win 10/20  ppl=8.69
+  [Full Cache] win 11/20  ppl=8.49
+  [Full Cache] win 12/20  ppl=8.53
+  [Full Cache] win 13/20  ppl=8.30
+  [Full Cache] win 14/20  ppl=8.34
+  [Full Cache] win 15/20  ppl=8.62
+  [Full Cache] win 16/20  ppl=8.53
+  [Full Cache] win 17/20  ppl=8.37
+  [Full Cache] win 18/20  ppl=8.37
+  [Full Cache] win 19/20  ppl=8.17
+  [Full Cache] win 20/20  ppl=8.17
+  [Full Cache]  FINAL PPL = 8.168
+Elapsed: 3.0 min
+Saved.
+
+============================================================
+Dataset: wikitext-2-v1  |  Condition: Authors H2O 20%
+============================================================
+  [Authors] Patched 32 layers  heavy=51 recent=51 (20% of 512)
+  [Authors H2O 20%] win 1/20  ppl=13.13
+  [Authors H2O 20%] win 2/20  ppl=11.61
+  [Authors H2O 20%] win 3/20  ppl=11.66
+  [Authors H2O 20%] win 4/20  ppl=10.33
+  [Authors H2O 20%] win 5/20  ppl=10.01
+  [Authors H2O 20%] win 6/20  ppl=10.03
+  [Authors H2O 20%] win 7/20  ppl=9.94
+  [Authors H2O 20%] win 8/20  ppl=9.82
+  [Authors H2O 20%] win 9/20  ppl=9.78
+  [Authors H2O 20%] win 10/20  ppl=9.95
+  [Authors H2O 20%] win 11/20  ppl=9.71
+  [Authors H2O 20%] win 12/20  ppl=9.75
+  [Authors H2O 20%] win 13/20  ppl=9.42
+  [Authors H2O 20%] win 14/20  ppl=9.48
+  [Authors H2O 20%] win 15/20  ppl=9.93
+  [Authors H2O 20%] win 16/20  ppl=9.79
+  [Authors H2O 20%] win 17/20  ppl=9.63
+  [Authors H2O 20%] win 18/20  ppl=9.63
+  [Authors H2O 20%] win 19/20  ppl=9.36
+  [Authors H2O 20%] win 20/20  ppl=9.38
+  [Authors H2O 20%]  FINAL PPL = 9.376
+Elapsed: 4.7 min
+Saved.
+
+============================================================
+Dataset: wikitext-2-v1  |  Condition: Ours H2O 20%
+============================================================
+  [Ours]    Patched 32 layers  heavy=51 recent=51 (20% of 512)
+  [Ours H2O 20%] win 1/20  ppl=17.67
+  [Ours H2O 20%] win 2/20  ppl=15.54
+  [Ours H2O 20%] win 3/20  ppl=15.04
+  [Ours H2O 20%] win 4/20  ppl=13.02
+  [Ours H2O 20%] win 5/20  ppl=12.51
+  [Ours H2O 20%] win 6/20  ppl=12.49
+  [Ours H2O 20%] win 7/20  ppl=12.10
+  [Ours H2O 20%] win 8/20  ppl=11.86
+  [Ours H2O 20%] win 9/20  ppl=11.89
+  [Ours H2O 20%] win 10/20  ppl=11.99
+  [Ours H2O 20%] win 11/20  ppl=11.77
+  [Ours H2O 20%] win 12/20  ppl=11.81
+  [Ours H2O 20%] win 13/20  ppl=11.48
+  [Ours H2O 20%] win 14/20  ppl=11.57
+  [Ours H2O 20%] win 15/20  ppl=12.00
+  [Ours H2O 20%] win 16/20  ppl=11.78
+  [Ours H2O 20%] win 17/20  ppl=11.58
+  [Ours H2O 20%] win 18/20  ppl=11.48
+  [Ours H2O 20%] win 19/20  ppl=11.22
+  [Ours H2O 20%] win 20/20  ppl=11.07
+  [Ours H2O 20%]  FINAL PPL = 11.066
+Elapsed: 6.6 min
+Saved.
+
+============================================================
+Dataset: wikitext-2-v1  |  Condition: Ours H2O 50%
+============================================================
+  [Ours]    Patched 32 layers  heavy=128 recent=128 (50% of 512)
+  [Ours H2O 50%] win 1/20  ppl=13.85
+  [Ours H2O 50%] win 2/20  ppl=11.85
+  [Ours H2O 50%] win 3/20  ppl=11.64
+  [Ours H2O 50%] win 4/20  ppl=10.16
+  [Ours H2O 50%] win 5/20  ppl=9.76
+  [Ours H2O 50%] win 6/20  ppl=9.72
+  [Ours H2O 50%] win 7/20  ppl=9.59
+  [Ours H2O 50%] win 8/20  ppl=9.43
+  [Ours H2O 50%] win 9/20  ppl=9.33
+  [Ours H2O 50%] win 10/20  ppl=9.42
+  [Ours H2O 50%] win 11/20  ppl=9.17
+  [Ours H2O 50%] win 12/20  ppl=9.20
+  [Ours H2O 50%] win 13/20  ppl=8.97
+  [Ours H2O 50%] win 14/20  ppl=9.01
+  [Ours H2O 50%] win 15/20  ppl=9.33
+  [Ours H2O 50%] win 16/20  ppl=9.21
+  [Ours H2O 50%] win 17/20  ppl=9.03
+  [Ours H2O 50%] win 18/20  ppl=9.00
+  [Ours H2O 50%] win 19/20  ppl=8.79
+  [Ours H2O 50%] win 20/20  ppl=8.74
+  [Ours H2O 50%]  FINAL PPL = 8.739
+Elapsed: 6.4 min
+Saved.
+
+============================================================
+Dataset: wikitext-2-v1  |  Condition: Local-only 20%
+============================================================
+  [Ours]    Patched 32 layers  heavy=0 recent=102 (20% of 512)
+  [Local-only 20%] win 1/20  ppl=34.14
+  [Local-only 20%] win 2/20  ppl=29.91
+  [Local-only 20%] win 3/20  ppl=31.03
+  [Local-only 20%] win 4/20  ppl=26.20
+  [Local-only 20%] win 5/20  ppl=26.22
+  [Local-only 20%] win 6/20  ppl=26.81
+  [Local-only 20%] win 7/20  ppl=25.45
+  [Local-only 20%] win 8/20  ppl=24.73
+  [Local-only 20%] win 9/20  ppl=23.39
+  [Local-only 20%] win 10/20  ppl=23.41
+  [Local-only 20%] win 11/20  ppl=23.17
+  [Local-only 20%] win 12/20  ppl=23.12
+  [Local-only 20%] win 13/20  ppl=21.88
+  [Local-only 20%] win 14/20  ppl=21.87
+  [Local-only 20%] win 15/20  ppl=22.44
+  [Local-only 20%] win 16/20  ppl=22.22
+  [Local-only 20%] win 17/20  ppl=22.28
+  [Local-only 20%] win 18/20  ppl=23.45
+  [Local-only 20%] win 19/20  ppl=22.84
+  [Local-only 20%] win 20/20  ppl=22.28
+  [Local-only 20%]  FINAL PPL = 22.281
+Elapsed: 6.3 min
+Saved.
+
+=================================================================
+EXPERIMENT 6 RESULTS — wikitext-103-v1 (OPT-6.7B)
+=================================================================
+Condition                    PPL   Delta vs Full Cache
+-----------------------------------------------------------------
+Full Cache                 8.464                     —
+Authors H2O 20%            9.731                +1.266
+Ours H2O 20%              11.538                +3.073
+Ours H2O 50%               9.185                +0.721
+Local-only 20%            29.875               +21.411
+=================================================================
+
+=================================================================
+EXPERIMENT 6 RESULTS — wikitext-2-v1 (OPT-6.7B)
+=================================================================
+Condition                    PPL   Delta vs Full Cache
+-----------------------------------------------------------------
+Full Cache                 8.168                     —
+Authors H2O 20%            9.376                +1.208
+Ours H2O 20%              11.066                +2.898
+Ours H2O 50%               8.739                +0.571
+Local-only 20%            22.281               +14.113
+=================================================================
+Saved: /srikar/heavy-hitter-oracle/plots/06_perplexity/06_perplexity_wt103.png
+Saved: /srikar/heavy-hitter-oracle/plots/06_perplexity/06_perplexity_wt2.png
+Saved: /srikar/heavy-hitter-oracle/plots/06_perplexity/06_perplexity_combined.png
+
+All Exp 6 plots saved.
+==========================================
+End: Sun May  3 05:51:02 AM UTC 2026
+Results: /srikar/heavy-hitter-oracle/results/06_perplexity.json
+==========================================
