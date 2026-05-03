@@ -160,13 +160,13 @@ This repo re-implements H2O from scratch in PyTorch and runs a full suite of exp
 
 ## Exp 6 - Perplexity Evaluation
 
-**Setup:** OPT-6.7B on WikiText-103 and WikiText-2 validation sets. Sliding window: 512-token context → predict 256-token target, 20 windows, stride 256. Conditions compared at 20% total budget (10% heavy + 10% recent) and 50% budget (25%+25%). Perplexity requires continuous text — multiple-choice tasks (COPA, PIQA, etc.) cannot be scored with PPL.
+**Setup:** OPT-6.7B on WikiText-103 and WikiText-2 validation sets. Sliding window: 512-token context → predict 256-token target, 20 windows, stride 256. Conditions compared at 20% total budget (10% heavy + 10% recent) and 50% budget (25%+25%). Perplexity requires continuous text - multiple-choice tasks (COPA, PIQA, etc.) cannot be scored with PPL.
 
 **WikiText-103 Results:**
 
 | Condition | PPL | Δ vs Full Cache |
 |---|---|---|
-| Full Cache | 8.464 | — |
+| Full Cache | 8.464 | - |
 | Authors H2O 20% | 9.731 | +1.267 |
 | **Ours H2O 50%** | **9.185** | **+0.721** |
 | Ours H2O 20% | 11.538 | +3.074 |
@@ -176,13 +176,13 @@ This repo re-implements H2O from scratch in PyTorch and runs a full suite of exp
 
 | Condition | PPL | Δ vs Full Cache |
 |---|---|---|
-| Full Cache | 8.168 | — |
+| Full Cache | 8.168 | - |
 | Authors H2O 20% | 9.376 | +1.208 |
 | **Ours H2O 50%** | **8.739** | **+0.571** |
 | Ours H2O 20% | 11.066 | +2.898 |
 | Local-only 20% | 22.281 | +14.113 |
 
-**Finding:** Our H2O at 50% budget (25%+25%) achieves the best PPL among all eviction methods — outperforming the authors' 20% implementation on both datasets. At 20% budget our implementation trails the authors' slightly, likely because we physically evict tokens (achieving real memory savings) while the authors mask without evicting. Local-only degrades catastrophically, confirming that heavy hitters are essential for language modeling quality.
+**Finding:** Our H2O at 50% budget (25%+25%) achieves the best PPL among all eviction methods - outperforming the authors' 20% implementation on both datasets. At 20% budget our implementation trails the authors' slightly, likely because we physically evict tokens (achieving real memory savings) while the authors mask without evicting. Local-only degrades catastrophically, confirming that heavy hitters are essential for language modeling quality.
 
 | WikiText-103 | WikiText-2 |
 |---|---|
