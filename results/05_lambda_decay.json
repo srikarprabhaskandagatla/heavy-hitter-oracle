@@ -1,0 +1,32 @@
+{
+  "lambda=1.00 (standard H2O)": {
+    "copa": 59.0,
+    "openbookqa": 13.2,
+    "piqa": 58.76,
+    "winogrande": 51.93
+  },
+  "lambda=0.95": {
+    "copa": 59.0,
+    "openbookqa": 13.0,
+    "piqa": 58.65,
+    "winogrande": 52.41
+  },
+  "lambda=0.90": {
+    "copa": 59.0,
+    "openbookqa": 13.4,
+    "piqa": 58.54,
+    "winogrande": 53.28
+  },
+  "lambda=0.80": {
+    "copa": 60.0,
+    "openbookqa": 13.4,
+    "piqa": 56.96,
+    "winogrande": 51.93
+  },
+  "lambda=0.50": {
+    "copa": 59.0,
+    "openbookqa": 14.6,
+    "piqa": 56.15,
+    "winogrande": 51.54
+  }
+}
