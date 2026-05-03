@@ -1,0 +1,30 @@
+{
+  "full_cache": {
+    "128": {
+      "tokens_per_sec": 384.36,
+      "peak_mem_gb": 14.419
+    },
+    "256": {
+      "tokens_per_sec": 372.53,
+      "peak_mem_gb": 14.962
+    },
+    "512": {
+      "tokens_per_sec": 357.42,
+      "peak_mem_gb": 16.052
+    }
+  },
+  "h2o_20pct": {
+    "128": {
+      "tokens_per_sec": 342.9,
+      "peak_mem_gb": 13.436
+    },
+    "256": {
+      "tokens_per_sec": 281.74,
+      "peak_mem_gb": 13.58
+    },
+    "512": {
+      "tokens_per_sec": 218.42,
+      "peak_mem_gb": 14.065
+    }
+  }
+}
