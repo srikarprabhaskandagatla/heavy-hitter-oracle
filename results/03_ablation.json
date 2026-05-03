@@ -1,0 +1,26 @@
+{
+  "Full Cache (baseline)": {
+    "copa": 81.0,
+    "openbookqa": 27.6,
+    "piqa": 76.28,
+    "winogrande": 65.27
+  },
+  "Local-only  (H=0,   R=20%)": {
+    "copa": 60.0,
+    "openbookqa": 13.2,
+    "piqa": 52.88,
+    "winogrande": 50.43
+  },
+  "H2-only (H=20%, R=0)": {
+    "copa": 60.0,
+    "openbookqa": 12.2,
+    "piqa": 51.74,
+    "winogrande": 52.41
+  },
+  "H2O 50/50 (H=10%, R=10%)": {
+    "copa": 58.0,
+    "openbookqa": 13.4,
+    "piqa": 62.73,
+    "winogrande": 51.62
+  }
+}
