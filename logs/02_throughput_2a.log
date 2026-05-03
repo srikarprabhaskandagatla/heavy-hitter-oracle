@@ -1,0 +1,43 @@
+
+Loading tokenizer for facebook/opt-6.7b
+
+============================================================
+EXP 2a PART 1: Full Cache Throughput
+Fixed prompt=256, generate=128 tokens
+============================================================
+  [Full Cache] batch= 1  tok/s=   41.6  peak_mem=13.53 GB  avg_time=3.07s
+  [Full Cache] batch= 2  tok/s=   97.5  peak_mem=13.73 GB  avg_time=2.63s
+  [Full Cache] batch= 4  tok/s=  195.6  peak_mem=14.14 GB  avg_time=2.62s
+  [Full Cache] batch= 8  tok/s=  387.6  peak_mem=14.96 GB  avg_time=2.64s
+  [Full Cache] batch=16  tok/s=  714.7  peak_mem=16.60 GB  avg_time=2.87s
+Full cache results saved.
+
+============================================================
+EXP 2a PART 2: H2O 20% Budget Throughput
+============================================================
+[H2O] Patched 32 layers (heavy=10%, recent=10%)
+  [H2O 20%] batch= 1  tok/s=   33.9  peak_mem=13.36 GB  avg_time=3.77s
+  [H2O 20%] batch= 2  tok/s=   73.4  peak_mem=13.39 GB  avg_time=3.49s
+  [H2O 20%] batch= 4  tok/s=  146.3  peak_mem=13.45 GB  avg_time=3.50s
+  [H2O 20%] batch= 8  tok/s=  294.8  peak_mem=13.58 GB  avg_time=3.47s
+  [H2O 20%] batch=16  tok/s=  587.8  peak_mem=13.83 GB  avg_time=3.48s
+H2O results saved.
+
+======================================================================
+EXPERIMENT 2 RESULTS — Throughput Benchmarking (OPT-6.7B)
+======================================================================
+ Batch |  Full Cache tok/s | Full Cache Mem |  H2O tok/s |  H2O Mem | Speedup
+----------------------------------------------------------------------
+     1 |              41.6 |       13.53 GB |       34.0 |    13.36 GB |   0.82x
+     2 |              97.5 |       13.73 GB |       73.4 |    13.39 GB |   0.75x
+     4 |             195.6 |       14.14 GB |      146.3 |    13.45 GB |   0.75x
+     8 |             387.6 |       14.96 GB |      294.8 |    13.58 GB |   0.76x
+    16 |             714.7 |       16.60 GB |      587.8 |    13.83 GB |   0.82x
+======================================================================
+Saved: /srikar/heavy-hitter-oracle/plots/02_throughput_2a.png
+Saved: /srikar/heavy-hitter-oracle/plots/02_throughput_memory_2a.png
+Both Exp 2a plots saved.
+==========================================
+End: Sat May  2 08:32:43 PM UTC 2026
+Results: /srikar/heavy-hitter-oracle/results/02_throughput_2a.json
+==========================================

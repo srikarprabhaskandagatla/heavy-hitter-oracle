@@ -1,0 +1,39 @@
+
+Loading tokenizer for facebook/opt-6.7b
+
+============================================================
+EXP 2b PART 1: Full Cache — varying sequence length
+Fixed batch=8, generate=128 tokens
+============================================================
+  [Full Cache] prompt_len=128  tok/s=  384.4  peak_mem=14.42 GB
+  [Full Cache] prompt_len=256  tok/s=  372.5  peak_mem=14.96 GB
+  [Full Cache] prompt_len=512  tok/s=  357.4  peak_mem=16.05 GB
+Full cache seq-length results saved.
+
+============================================================
+EXP 2b PART 2: H2O 20% — varying sequence length
+============================================================
+[H2O] Patched 32 layers (heavy=10%, recent=10%)
+  [H2O 20%] prompt_len=128  tok/s=  342.9  peak_mem=13.44 GB
+  [H2O 20%] prompt_len=256  tok/s=  281.7  peak_mem=13.58 GB
+  [H2O 20%] prompt_len=512  tok/s=  218.4  peak_mem=14.06 GB
+H2O seq-length results saved.
+
+======================================================================
+EXP 2b RESULTS — Throughput vs Sequence Length (batch=8)
+======================================================================
+  SeqLen |   FC tok/s |   FC Mem |  H2O tok/s |  H2O Mem |  Mem Saved
+----------------------------------------------------------------------
+     128 |      384.4 |   14.42G |      342.9 |   13.44G |     +0.98G
+     256 |      372.5 |   14.96G |      281.7 |   13.58G |     +1.38G
+     512 |      357.4 |   16.05G |      218.4 |   14.06G |     +1.99G
+======================================================================
+
+Key question: does memory gap widen at longer sequences?
+Saved: /srikar/heavy-hitter-oracle/plots/02_throughput_2b.png
+Saved: /srikar/heavy-hitter-oracle/plots/02_throughput_memory_2b.png
+Both Exp 2b plots saved.
+==========================================
+End: Sat May  2 08:17:29 PM UTC 2026
+Results: /srikar/heavy-hitter-oracle/results/02_throughput_2b.json
+==========================================
