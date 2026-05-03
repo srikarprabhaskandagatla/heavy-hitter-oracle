@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
 sys.path.insert(0, str(Path(__file__).parent.parent / "h2o_scratch"))
-from h2o_attention_throughput import patch_model_with_h2o, reset_h2o_caches
+from h2o_attention import patch_model_with_h2o, reset_h2o_caches
 
 MODEL_NAME = "facebook/opt-6.7b"
 
