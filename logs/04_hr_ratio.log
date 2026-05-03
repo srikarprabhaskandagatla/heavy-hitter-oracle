@@ -1,0 +1,42 @@
+Known points from Exp 3 prepopulated. Running 2 new conditions...
+
+
+Loading facebook/opt-6.7b
+[H2O] Patched 32 OPTAttention layers (heavy=5%, recent=15%, total budget=20%, decay_lambda=1.0)
+
+============================================================
+Running: H=5%,  R=15%
+============================================================
+  [H=5%,  R=15%]  copa: 60.0% | openbookqa: 14.4% | piqa: 61.3% | winogrande: 53.0%  | Avg: 47.2%
+Elapsed: 3.3 min
+Saved.
+
+============================================================
+Running: H=15%, R=5%
+============================================================
+  [H=15%, R=5%]  copa: 56.0% | openbookqa: 12.8% | piqa: 56.2% | winogrande: 50.2%  | Avg: 43.8%
+Elapsed: 3.1 min
+Saved.
+
+======================================================================
+EXPERIMENT 4 RESULTS — H:R Ratio Sweep (20% KV Budget, OPT-6.7B)
+======================================================================
+Ratio                     COPA  OPENBOOKQA        PIQA  WINOGRANDE     Avg
+----------------------------------------------------------------------
+H=0%,  R=20%             53.0%       14.4%       52.8%       50.8%   42.7%
+H=5%,  R=15%             60.0%       14.4%       61.3%       53.0%   47.2%
+H=10%, R=10%             53.0%       14.8%       58.8%       50.8%   44.3%
+H=15%, R=5%              56.0%       12.8%       56.2%       50.2%   43.8%
+H=20%, R=0%              59.0%       13.8%       52.7%       50.5%   44.0%
+======================================================================
+Saved: /work/pi_dagarwal_umass_edu/project_7/srikar/heavy-hitter-oracle/plots/04_hr_ratio/04_hr_ratio_sweep_copa.png
+Saved: /work/pi_dagarwal_umass_edu/project_7/srikar/heavy-hitter-oracle/plots/04_hr_ratio/04_hr_ratio_sweep_openbookqa.png
+Saved: /work/pi_dagarwal_umass_edu/project_7/srikar/heavy-hitter-oracle/plots/04_hr_ratio/04_hr_ratio_sweep_piqa.png
+Saved: /work/pi_dagarwal_umass_edu/project_7/srikar/heavy-hitter-oracle/plots/04_hr_ratio/04_hr_ratio_sweep_winogrande.png
+Saved: /work/pi_dagarwal_umass_edu/project_7/srikar/heavy-hitter-oracle/plots/04_hr_ratio/04_hr_ratio_sweep_avg.png
+
+All Exp 4 plots saved.
+==========================================
+End: Sat May  2 11:54:12 PM UTC 2026
+Results: /work/pi_dagarwal_umass_edu/project_7/srikar/heavy-hitter-oracle/results/04_hr_ratio.json
+==========================================
