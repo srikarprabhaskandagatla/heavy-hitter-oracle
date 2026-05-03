@@ -1,0 +1,46 @@
+{
+  "full_cache": {
+    "1": {
+      "tokens_per_sec": 41.64,
+      "peak_mem_gb": 13.532
+    },
+    "2": {
+      "tokens_per_sec": 97.45,
+      "peak_mem_gb": 13.735
+    },
+    "4": {
+      "tokens_per_sec": 195.59,
+      "peak_mem_gb": 14.144
+    },
+    "8": {
+      "tokens_per_sec": 387.63,
+      "peak_mem_gb": 14.962
+    },
+    "16": {
+      "tokens_per_sec": 714.71,
+      "peak_mem_gb": 16.598
+    }
+  },
+  "h2o_20pct": {
+    "1": {
+      "tokens_per_sec": 33.95,
+      "peak_mem_gb": 13.358
+    },
+    "2": {
+      "tokens_per_sec": 73.41,
+      "peak_mem_gb": 13.39
+    },
+    "4": {
+      "tokens_per_sec": 146.28,
+      "peak_mem_gb": 13.453
+    },
+    "8": {
+      "tokens_per_sec": 294.77,
+      "peak_mem_gb": 13.58
+    },
+    "16": {
+      "tokens_per_sec": 587.82,
+      "peak_mem_gb": 13.833
+    }
+  }
+}
